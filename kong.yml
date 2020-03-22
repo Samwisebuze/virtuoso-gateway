@@ -1,15 +1,21 @@
 _format_version: "1.1"
 
 services:
-- name: my-service
-  url: http://127.0.0.1:8080
+- name: auth-service
+  url: http://host.docker.internal:4000 # this hostname works, so we're keeping it for now
   routes:
-  - name: my-route
+  - name: auth-service-api
     paths:
     - /
-- name: dummy-service
-  url: http://host.docker.internal:5000
-  routes:
-  - name: dummy-routes
-    paths:
-    - /
+# - name: my-service
+#   url: http://127.0.0.1:8080
+#   routes:
+#   - name: my-route
+#     paths:
+#     - /
+# - name: dummy-service
+#   url: http://172.22.0.3:5000
+#   routes:
+#   - name: dummy-routes
+#     paths:
+#     - /

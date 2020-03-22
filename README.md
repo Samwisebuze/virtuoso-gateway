@@ -19,7 +19,7 @@ $ docker network create kong-net
 Run:
 
 ```sh
-docker run -d --rm --name kong \
+$ docker run -it --rm --name kong \
      --network=kong-net \
      -p 8000:8000 \
      -p 8001:8001 \
